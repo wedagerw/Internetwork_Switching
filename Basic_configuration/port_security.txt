@@ -6,3 +6,19 @@ Switch(config-if)#switchport port-security
 Switch(config-if)#switchport port-security maximum 1
 Switch(config-if)#switchport port-security mac-address aaaa.bbbb.cccc  
 Switch(config-if)#switchport port-security violation shutdown
+
+
+Sticky method:
+
+Sticky method will learn the Host's MAC address automatically once any host is connected to the port. 
+
+Switch(config)# interface range fastEthernet 0/1 
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport port-security
+Switch(config-if)# switchport port-security maximum 1
+Switch(config-if)# switchport port-security mac address sticky
+Switch(config-if)#switchport port security violation shutdown
+
+
+Finally : change the port and make sure to ping one device to other.
+This will shutdown the interface
