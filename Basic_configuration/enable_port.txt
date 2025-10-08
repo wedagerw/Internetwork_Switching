@@ -1,0 +1,5 @@
+How to enable shutdown port 
+
+select the interface (interface fastethernet 0/1)
+shutdown the interface (shutdown)
+turn on the interface (noshutdown)
